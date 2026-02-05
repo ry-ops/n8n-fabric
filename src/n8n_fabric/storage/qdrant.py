@@ -116,23 +116,26 @@ class WorkflowVectorStore:
         tags: Optional[list[str]] = None,
     ) -> list[dict]:
         """Search workflows by semantic similarity."""
+        from qdrant_client.models import Filter, FieldCondition, MatchValue
+
         embedding = self.embedder.encode(query).tolist()
 
         # Build filter
         must_conditions = []
         if active_only:
-            must_conditions.append({"key": "active", "match": {"value": True}})
+            must_conditions.append(FieldCondition(key="active", match=MatchValue(value=True)))
         if tags:
             for tag in tags:
-                must_conditions.append({"key": "tags", "match": {"value": tag}})
+                must_conditions.append(FieldCondition(key="tags", match=MatchValue(value=tag)))
 
-        filter_obj = {"must": must_conditions} if must_conditions else None
+        filter_obj = Filter(must=must_conditions) if must_conditions else None
 
-        results = self.client.search(
+        results = self.client.query_points(
             collection_name=self.collection_name,
-            query_vector=embedding,
+            query=embedding,
             limit=limit,
             query_filter=filter_obj,
+            with_payload=True,
         )
 
         return [
@@ -145,7 +148,7 @@ class WorkflowVectorStore:
                 "node_count": r.payload.get("node_count"),
                 "node_types": r.payload.get("node_types"),
             }
-            for r in results
+            for r in results.points
         ]
 
     def get_workflow(self, workflow_id: str) -> Optional[dict]:

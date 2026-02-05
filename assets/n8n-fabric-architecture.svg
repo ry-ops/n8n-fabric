@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <defs>
+    <linearGradient id="fabricGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#5B21B6"/>
+    </linearGradient>
+    <linearGradient id="n8nGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6D5A"/>
+      <stop offset="100%" stop-color="#EA4335"/>
+    </linearGradient>
+    <linearGradient id="qdrantGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="redisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#B91C1C"/>
+    </linearGradient>
+    <linearGradient id="postgresGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#336791"/>
+      <stop offset="100%" stop-color="#264D73"/>
+    </linearGradient>
+    <linearGradient id="gitSteerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <linearGradient id="aianaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#BE185D"/>
+    </linearGradient>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#7C3AED"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#FF6D5A"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="550" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="bold">n8n-fabric - Workflow Automation Fabric</text>
+  <text x="450" y="55" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12">MCP Server + Qdrant Vectors + Redis Cache</text>
+
+  <!-- n8n-fabric MCP Server Box -->
+  <rect x="320" y="80" width="260" height="150" rx="10" fill="url(#fabricGrad)"/>
+  <text x="450" y="108" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="15" font-weight="bold">n8n-fabric MCP Server</text>
+
+  <!-- MCP Components -->
+  <rect x="340" y="120" width="220" height="24" rx="5" fill="#ffffff" fill-opacity="0.15"/>
+  <text x="450" y="137" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Workflow CRUD (create/read/update/delete)</text>
+
+  <rect x="340" y="150" width="220" height="24" rx="5" fill="#ffffff" fill-opacity="0.15"/>
+  <text x="450" y="167" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Execution Management (run/retry/stop)</text>
+
+  <rect x="340" y="180" width="220" height="24" rx="5" fill="#ffffff" fill-opacity="0.15"/>
+  <text x="450" y="197" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Semantic Search (via Qdrant)</text>
+
+  <!-- n8n Engine Box -->
+  <rect x="50" y="100" width="180" height="110" rx="10" fill="url(#n8nGrad)"/>
+  <text x="140" y="128" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">n8n Engine</text>
+  <text x="140" y="150" text-anchor="middle" fill="#fef3c7" font-family="Arial, sans-serif" font-size="10">REST API</text>
+  <text x="140" y="167" text-anchor="middle" fill="#fef3c7" font-family="Arial, sans-serif" font-size="10">Execution Engine</text>
+  <text x="140" y="184" text-anchor="middle" fill="#fef3c7" font-family="Arial, sans-serif" font-size="10">500+ Nodes</text>
+
+  <!-- Storage Layer -->
+  <rect x="50" y="280" width="120" height="80" rx="8" fill="url(#postgresGrad)"/>
+  <text x="110" y="305" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">PostgreSQL</text>
+  <text x="110" y="322" text-anchor="middle" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="9">n8n Data</text>
+  <text x="110" y="337" text-anchor="middle" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="9">Workflows</text>
+  <text x="110" y="352" text-anchor="middle" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="9">Executions</text>
+
+  <rect x="190" y="280" width="120" height="80" rx="8" fill="url(#qdrantGrad)"/>
+  <text x="250" y="305" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Qdrant</text>
+  <text x="250" y="322" text-anchor="middle" fill="#d1fae5" font-family="Arial, sans-serif" font-size="9">Workflow Vectors</text>
+  <text x="250" y="337" text-anchor="middle" fill="#d1fae5" font-family="Arial, sans-serif" font-size="9">Semantic Search</text>
+  <text x="250" y="352" text-anchor="middle" fill="#d1fae5" font-family="Arial, sans-serif" font-size="9">Pattern Matching</text>
+
+  <rect x="330" y="280" width="120" height="80" rx="8" fill="url(#redisGrad)"/>
+  <text x="390" y="305" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Redis</text>
+  <text x="390" y="322" text-anchor="middle" fill="#fee2e2" font-family="Arial, sans-serif" font-size="9">Metadata Cache</text>
+  <text x="390" y="337" text-anchor="middle" fill="#fee2e2" font-family="Arial, sans-serif" font-size="9">Execution State</text>
+  <text x="390" y="352" text-anchor="middle" fill="#fee2e2" font-family="Arial, sans-serif" font-size="9">Active Tracking</text>
+
+  <!-- Ecosystem Box -->
+  <rect x="620" y="100" width="230" height="170" rx="10" fill="#1e293b"/>
+  <text x="735" y="125" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">ry-ops Fabric Ecosystem</text>
+
+  <!-- git-steer -->
+  <rect x="640" y="140" width="90" height="55" rx="6" fill="url(#gitSteerGrad)"/>
+  <text x="685" y="162" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="10" font-weight="bold">git-steer</text>
+  <text x="685" y="177" text-anchor="middle" fill="#fef3c7" font-family="Arial, sans-serif" font-size="8">Repo Lifecycle</text>
+  <text x="685" y="189" text-anchor="middle" fill="#fef3c7" font-family="Arial, sans-serif" font-size="8">Version Control</text>
+
+  <!-- aiana -->
+  <rect x="740" y="140" width="90" height="55" rx="6" fill="url(#aianaGrad)"/>
+  <text x="785" y="162" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="10" font-weight="bold">aiana</text>
+  <text x="785" y="177" text-anchor="middle" fill="#fce7f3" font-family="Arial, sans-serif" font-size="8">Memory Layer</text>
+  <text x="785" y="189" text-anchor="middle" fill="#fce7f3" font-family="Arial, sans-serif" font-size="8">Pattern Recall</text>
+
+  <!-- n8n-fabric in ecosystem -->
+  <rect x="690" y="205" width="90" height="55" rx="6" fill="url(#fabricGrad)"/>
+  <text x="735" y="227" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="10" font-weight="bold">n8n-fabric</text>
+  <text x="735" y="242" text-anchor="middle" fill="#e9d5ff" font-family="Arial, sans-serif" font-size="8">Workflows</text>
+  <text x="735" y="254" text-anchor="middle" fill="#e9d5ff" font-family="Arial, sans-serif" font-size="8">Playbooks</text>
+
+  <!-- Connection Lines -->
+  <!-- MCP to n8n -->
+  <path d="M320,155 L235,155" stroke="#7C3AED" stroke-width="2" fill="none" marker-end="url(#arrowPurple)"/>
+  <text x="277" y="148" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="8">API</text>
+
+  <!-- n8n to PostgreSQL -->
+  <path d="M140,210 L110,275" stroke="#FF6D5A" stroke-width="2" fill="none" marker-end="url(#arrowOrange)"/>
+
+  <!-- MCP to Qdrant -->
+  <path d="M380,230 L280,275" stroke="#059669" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+
+  <!-- MCP to Redis -->
+  <path d="M450,230 L390,275" stroke="#DC2626" stroke-width="2" fill="none"/>
+
+  <!-- MCP to Ecosystem -->
+  <path d="M580,155 L615,155" stroke="#7C3AED" stroke-width="2" stroke-dasharray="5,3" fill="none"/>
+  <text x="597" y="148" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="8">MCP</text>
+
+  <!-- Legend -->
+  <rect x="500" y="280" width="180" height="80" rx="8" fill="#1e293b"/>
+  <text x="520" y="302" fill="#ffffff" font-family="Arial, sans-serif" font-size="10" font-weight="bold">MCP Tools</text>
+  <text x="520" y="318" fill="#94a3b8" font-family="Arial, sans-serif" font-size="8">workflow_* (CRUD, execute)</text>
+  <text x="520" y="332" fill="#94a3b8" font-family="Arial, sans-serif" font-size="8">execution_* (list, retry, stop)</text>
+  <text x="520" y="346" fill="#94a3b8" font-family="Arial, sans-serif" font-size="8">credential_*, tag_*, variable_*</text>
+
+  <!-- Version Box -->
+  <rect x="700" y="280" width="90" height="80" rx="8" fill="#1e293b"/>
+  <text x="745" y="310" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">v0.1.0</text>
+  <text x="745" y="328" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="8">Full API Access</text>
+  <text x="745" y="342" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="8">Fabric Layer</text>
+  <text x="745" y="356" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="8">2026-02-04</text>
+
+  <!-- Footer -->
+  <text x="450" y="420" text-anchor="middle" fill="#475569" font-family="Arial, sans-serif" font-size="11">github.com/ry-ops/n8n-fabric | Workflow Automation Fabric</text>
+
+  <!-- Use Cases -->
+  <rect x="50" y="400" width="800" height="80" rx="8" fill="#1e293b"/>
+  <text x="450" y="425" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Cross-Fabric Use Cases</text>
+  <text x="180" y="448" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9">"Recall Slack notification workflow"</text>
+  <text x="180" y="463" text-anchor="middle" fill="#7C3AED" font-family="Arial, sans-serif" font-size="8">aiana + n8n-fabric</text>
+  <text x="450" y="448" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9">"Create workflow and commit to repo"</text>
+  <text x="450" y="463" text-anchor="middle" fill="#D97706" font-family="Arial, sans-serif" font-size="8">n8n-fabric + git-steer</text>
+  <text x="720" y="448" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9">"Run deployment playbook"</text>
+  <text x="720" y="463" text-anchor="middle" fill="#EC4899" font-family="Arial, sans-serif" font-size="8">All three fabrics</text>
+</svg>

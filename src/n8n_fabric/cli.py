@@ -142,7 +142,7 @@ def workflows_sync():
     n8n = N8nClient()
     qdrant = WorkflowVectorStore()
 
-    result = n8n.workflow_list(limit=1000)
+    result = n8n.workflow_list(limit=250)
     workflows_data = result.get("data", [])
 
     console.print(f"Syncing {len(workflows_data)} workflows to Qdrant...")

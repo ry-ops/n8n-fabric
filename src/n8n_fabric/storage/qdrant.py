@@ -1,13 +1,21 @@
 """Qdrant vector storage for workflow embeddings."""
 
+import hashlib
 import json
 import os
 from typing import Any, Optional
-from uuid import uuid4
+from uuid import UUID, uuid4
 
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, PointStruct, VectorParams
 from sentence_transformers import SentenceTransformer
+
+
+def string_to_uuid(s: str) -> str:
+    """Convert a string to a deterministic UUID."""
+    # Create a deterministic UUID from the string using MD5 hash
+    hash_bytes = hashlib.md5(s.encode()).digest()
+    return str(UUID(bytes=hash_bytes))
 
 
 class WorkflowVectorStore:
@@ -73,11 +81,13 @@ class WorkflowVectorStore:
     def index_workflow(self, workflow: dict, workflow_id: Optional[str] = None) -> str:
         """Index a workflow for semantic search."""
         wf_id = workflow_id or workflow.get("id") or str(uuid4())
+        # Convert string ID to UUID for Qdrant compatibility
+        point_id = string_to_uuid(wf_id)
         text = self._workflow_to_text(workflow)
         embedding = self.embedder.encode(text).tolist()
 
         point = PointStruct(
-            id=wf_id,
+            id=point_id,
             vector=embedding,
             payload={
                 "workflow_id": wf_id,
@@ -140,9 +150,10 @@ class WorkflowVectorStore:
 
     def get_workflow(self, workflow_id: str) -> Optional[dict]:
         """Get indexed workflow by ID."""
+        point_id = string_to_uuid(workflow_id)
         results = self.client.retrieve(
             collection_name=self.collection_name,
-            ids=[workflow_id],
+            ids=[point_id],
         )
 
         if results:
@@ -152,9 +163,10 @@ class WorkflowVectorStore:
 
     def delete_workflow(self, workflow_id: str):
         """Delete a workflow from the index."""
+        point_id = string_to_uuid(workflow_id)
         self.client.delete(
             collection_name=self.collection_name,
-            points_selector={"points": [workflow_id]},
+            points_selector={"points": [point_id]},
         )
 
     def get_stats(self) -> dict:

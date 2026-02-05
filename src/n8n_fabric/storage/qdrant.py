@@ -163,7 +163,6 @@ class WorkflowVectorStore:
         return {
             "collection": self.collection_name,
             "points_count": info.points_count,
-            "vectors_count": info.vectors_count,
         }
 
     def health_check(self) -> bool:

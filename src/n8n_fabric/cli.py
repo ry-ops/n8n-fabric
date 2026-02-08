@@ -1,14 +1,22 @@
 """CLI for n8n-fabric."""
 
 import json
+import os
+from pathlib import Path
 
 import click
+from dotenv import load_dotenv
 from rich.console import Console
 from rich.table import Table
 
 from n8n_fabric.mcp.n8n_client import N8nClient
 from n8n_fabric.storage.qdrant import WorkflowVectorStore
 from n8n_fabric.storage.redis import WorkflowCache
+
+# Load .env file if it exists
+env_file = Path(__file__).parent.parent.parent / ".env"
+if env_file.exists():
+    load_dotenv(env_file)
 
 console = Console()
 

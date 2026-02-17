@@ -13,8 +13,8 @@ from sentence_transformers import SentenceTransformer
 
 def string_to_uuid(s: str) -> str:
     """Convert a string to a deterministic UUID."""
-    # Create a deterministic UUID from the string using MD5 hash
-    hash_bytes = hashlib.md5(s.encode()).digest()
+    # Create a deterministic UUID from the string using SHA-256 (truncated to 16 bytes)
+    hash_bytes = hashlib.sha256(s.encode()).digest()[:16]
     return str(UUID(bytes=hash_bytes))
 
 

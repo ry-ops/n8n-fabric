@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/banner.svg" alt="n8n-fabric: n8n workflows over MCP, with Qdrant vectors and Redis caching" width="100%"></p>
+
 # n8n-fabric
 
 **Workflow Automation Fabric Layer**
@@ -221,7 +223,7 @@ n8n-fabric is part of the ry-ops fabric ecosystem:
 ## Documentation
 
 - [CLAUDE.md](CLAUDE.md) - AI assistant context
-- [Architecture](docs/ARCHITECTURE.md) - Technical design
+- [Fabric coordination](docs/FABRIC_COORDINATION.md) - Wiring n8n-fabric, git-steer and aiana together
 - [ADR-001](docs/decisions/001-fabric-architecture.md) - Fabric design decisions
 
 ---
@@ -239,3 +241,8 @@ MIT License - see [LICENSE](LICENSE) file for details.
 **Version:** 0.1.0
 
 **Updated:** 2026-02-04
+
+<!-- org-footer -->
+---
+
+<p align="center"><sub>Part of <a href="https://github.com/ry-ops">ry-ops</a> · building the pipes between infrastructure, automation, and observability · built by <a href="https://github.com/ry-ops">ry-ops</a></sub></p>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400" role="img" aria-labelledby="t d">
+  <title id="t">n8n-fabric MCP tools</title>
+  <desc id="d">Thirty-six MCP tools across eight groups: workflows, executions, credentials, tags and variables, projects and users, community nodes, source control, and system.</desc>
+  <defs><linearGradient id="title" x1="0" x2="1"><stop offset="0" stop-color="#a071ff"/><stop offset="1" stop-color="#ff6d5a"/></linearGradient></defs>
+  <style>
+    text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; fill:#eceaf6; }
+    .muted { fill:#9b93b5; } .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    @keyframes g0 { 0%,2.50% { opacity:0; transform:translateY(8px) } 10.00%,100% { opacity:1; transform:translateY(0) } } .g0 { animation:g0 8.0s infinite; }
+    @keyframes g1 { 0%,5.25% { opacity:0; transform:translateY(8px) } 12.75%,100% { opacity:1; transform:translateY(0) } } .g1 { animation:g1 8.0s infinite; }
+    @keyframes g2 { 0%,8.00% { opacity:0; transform:translateY(8px) } 15.50%,100% { opacity:1; transform:translateY(0) } } .g2 { animation:g2 8.0s infinite; }
+    @keyframes g3 { 0%,10.75% { opacity:0; transform:translateY(8px) } 18.25%,100% { opacity:1; transform:translateY(0) } } .g3 { animation:g3 8.0s infinite; }
+    @keyframes g4 { 0%,13.50% { opacity:0; transform:translateY(8px) } 21.00%,100% { opacity:1; transform:translateY(0) } } .g4 { animation:g4 8.0s infinite; }
+    @keyframes g5 { 0%,16.25% { opacity:0; transform:translateY(8px) } 23.75%,100% { opacity:1; transform:translateY(0) } } .g5 { animation:g5 8.0s infinite; }
+    @keyframes g6 { 0%,19.00% { opacity:0; transform:translateY(8px) } 26.50%,100% { opacity:1; transform:translateY(0) } } .g6 { animation:g6 8.0s infinite; }
+    @keyframes g7 { 0%,21.75% { opacity:0; transform:translateY(8px) } 29.25%,100% { opacity:1; transform:translateY(0) } } .g7 { animation:g7 8.0s infinite; }
+    @media (prefers-reduced-motion: reduce) { * { animation:none !important; opacity:1 !important; transform:none !important; } }
+  </style>
+  <rect width="960" height="400" rx="20" fill="#120f1c"/>
+  <text x="40" y="54" font-size="26" font-weight="800" style="fill:url(#title)">36 tools, full n8n control</text>
+  <text x="42" y="80" font-size="14" class="muted">Everything the n8n REST API exposes — plus semantic search — from your AI assistant.</text>
+  <g class="g0"><rect x="40" y="118" width="210" height="92" rx="11" fill="#1a1527" stroke="#a071ff" stroke-opacity=".5"/>
+  <circle cx="58" cy="142" r="5" fill="#a071ff"/>
+  <text x="72" y="147" font-size="14" font-weight="800">Workflows</text>
+  <text x="234" y="147" text-anchor="end" font-size="12" font-weight="800" style="fill:#a071ff">8</text>
+  <text x="56" y="168" font-size="10" class="mono muted"><tspan x="56" dy="0">list · get · create · update</tspan><tspan x="56" dy="14">delete · activate</tspan><tspan x="56" dy="14">deactivate · execute</tspan></text></g><g class="g1"><rect x="268" y="118" width="210" height="92" rx="11" fill="#1a1527" stroke="#ff6d5a" stroke-opacity=".5"/>
+  <circle cx="286" cy="142" r="5" fill="#ff6d5a"/>
+  <text x="300" y="147" font-size="14" font-weight="800">Executions</text>
+  <text x="462" y="147" text-anchor="end" font-size="12" font-weight="800" style="fill:#ff6d5a">5</text>
+  <text x="284" y="168" font-size="10" class="mono muted"><tspan x="284" dy="0">list · get · delete</tspan><tspan x="284" dy="14">retry · stop</tspan></text></g><g class="g2"><rect x="496" y="118" width="210" height="92" rx="11" fill="#1a1527" stroke="#f59e0b" stroke-opacity=".5"/>
+  <circle cx="514" cy="142" r="5" fill="#f59e0b"/>
+  <text x="528" y="147" font-size="14" font-weight="800">Credentials</text>
+  <text x="690" y="147" text-anchor="end" font-size="12" font-weight="800" style="fill:#f59e0b">4</text>
+  <text x="512" y="168" font-size="10" class="mono muted"><tspan x="512" dy="0">list · create</tspan><tspan x="512" dy="14">delete · schema</tspan></text></g><g class="g3"><rect x="724" y="118" width="210" height="92" rx="11" fill="#1a1527" stroke="#059669" stroke-opacity=".5"/>
+  <circle cx="742" cy="142" r="5" fill="#059669"/>
+  <text x="756" y="147" font-size="14" font-weight="800">Tags &amp; Variables</text>
+  <text x="918" y="147" text-anchor="end" font-size="12" font-weight="800" style="fill:#059669">7</text>
+  <text x="740" y="168" font-size="10" class="mono muted"><tspan x="740" dy="0">tag: list · create · delete</tspan><tspan x="740" dy="14">var: list · get</tspan><tspan x="740" dy="14">var: create · delete</tspan></text></g><g class="g4"><rect x="40" y="260" width="210" height="92" rx="11" fill="#1a1527" stroke="#3b82f6" stroke-opacity=".5"/>
+  <circle cx="58" cy="284" r="5" fill="#3b82f6"/>
+  <text x="72" y="289" font-size="14" font-weight="800">Projects &amp; Users</text>
+  <text x="234" y="289" text-anchor="end" font-size="12" font-weight="800" style="fill:#3b82f6">4</text>
+  <text x="56" y="310" font-size="10" class="mono muted"><tspan x="56" dy="0">project: list · create</tspan><tspan x="56" dy="14">project: delete · user: list</tspan></text></g><g class="g5"><rect x="268" y="260" width="210" height="92" rx="11" fill="#1a1527" stroke="#ec4899" stroke-opacity=".5"/>
+  <circle cx="286" cy="284" r="5" fill="#ec4899"/>
+  <text x="300" y="289" font-size="14" font-weight="800">Community nodes</text>
+  <text x="462" y="289" text-anchor="end" font-size="12" font-weight="800" style="fill:#ec4899">3</text>
+  <text x="284" y="310" font-size="10" class="mono muted"><tspan x="284" dy="0">list · install</tspan><tspan x="284" dy="14">uninstall</tspan></text></g><g class="g6"><rect x="496" y="260" width="210" height="92" rx="11" fill="#1a1527" stroke="#22d3ee" stroke-opacity=".5"/>
+  <circle cx="514" cy="284" r="5" fill="#22d3ee"/>
+  <text x="528" y="289" font-size="14" font-weight="800">Source control</text>
+  <text x="690" y="289" text-anchor="end" font-size="12" font-weight="800" style="fill:#22d3ee">3</text>
+  <text x="512" y="310" font-size="10" class="mono muted"><tspan x="512" dy="0">pull · push</tspan><tspan x="512" dy="14">status</tspan></text></g><g class="g7"><rect x="724" y="260" width="210" height="92" rx="11" fill="#1a1527" stroke="#9ca3af" stroke-opacity=".5"/>
+  <circle cx="742" cy="284" r="5" fill="#9ca3af"/>
+  <text x="756" y="289" font-size="14" font-weight="800">System</text>
+  <text x="918" y="289" text-anchor="end" font-size="12" font-weight="800" style="fill:#9ca3af">2</text>
+  <text x="740" y="310" font-size="10" class="mono muted"><tspan x="740" dy="0">audit_logs</tspan><tspan x="740" dy="14">fabric_status</tspan></text></g>
+</svg>

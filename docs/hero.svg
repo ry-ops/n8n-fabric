@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400" role="img" aria-labelledby="t d">
+  <title id="t">n8n-fabric: n8n workflows over MCP, made searchable</title>
+  <desc id="d">An AI assistant asks to run a playbook; n8n-fabric finds the matching workflow by meaning using Qdrant vectors, retrieves it, and runs it on the n8n engine — with Redis caching state along the way.</desc>
+  <defs><linearGradient id="title" x1="0" x2="1"><stop offset="0" stop-color="#a071ff"/><stop offset=".5" stop-color="#ff6d5a"/><stop offset="1" stop-color="#ff925a"/></linearGradient></defs>
+  <style>
+    text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; fill:#eceaf6; }
+    .muted { fill:#9b93b5; } .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    @keyframes s1 { 0%,3.00% { opacity:0 } 7.00%,27.00% { opacity:1 } 30.00%,100% { opacity:0 } } .s1 { animation:s1 10.0s infinite; }
+    @keyframes s2 { 0%,25.00% { opacity:0 } 29.00%,49.00% { opacity:1 } 52.00%,100% { opacity:0 } } .s2 { animation:s2 10.0s infinite; }
+    @keyframes s3 { 0%,47.00% { opacity:0 } 51.00%,71.00% { opacity:1 } 74.00%,100% { opacity:0 } } .s3 { animation:s3 10.0s infinite; }
+    @keyframes s4 { 0%,69.00% { opacity:0 } 73.00%,93.00% { opacity:1 } 96.00%,100% { opacity:0 } } .s4 { animation:s4 10.0s infinite; }
+    @keyframes pulse { 0% { offset-distance:0%; opacity:0 } 8%{opacity:1} 92%{opacity:1} 100% { offset-distance:100%; opacity:0 } } .pulse { animation: pulse 3s linear infinite; offset-path: path('M300 120 L 300 300'); }
+    @media (prefers-reduced-motion: reduce) { * { animation:none !important; opacity:1 !important; } }
+  </style>
+  <rect width="960" height="400" rx="20" fill="#120f1c"/>
+  <text x="40" y="54" font-size="30" font-weight="800" style="fill:url(#title)">n8n-fabric</text>
+  <text x="42" y="82" font-size="15" class="muted">n8n workflow automation over MCP — searchable by meaning, orchestratable by your AI.</text>
+
+  <!-- left: assistant conversation -->
+  <rect x="40" y="110" width="360" height="250" rx="12" fill="#1a1527" stroke="#2e2742"/>
+  <text x="60" y="136" font-size="11" font-weight="700" class="muted">AI ASSISTANT</text>
+  <g class="s1"><rect x="60" y="150" width="320" height="34" rx="8" fill="#241b3a"/><text x="76" y="172" font-size="12.5">“Run my deployment-notify playbook”</text></g>
+  <g class="s2"><rect x="60" y="196" width="320" height="34" rx="8" fill="#15202a"/><text x="76" y="218" font-size="12" class="muted">🔎 semantic search → Qdrant vectors</text></g>
+  <g class="s3"><rect x="60" y="242" width="320" height="34" rx="8" fill="#15202a"/><text x="76" y="264" font-size="12" class="muted">📄 matched: <tspan class="mono">deploy-notify.json</tspan></text></g>
+  <g class="s4"><rect x="60" y="288" width="320" height="34" rx="8" fill="#1e2a1c"/><text x="76" y="310" font-size="12" style="fill:#9fe0a0">▶ executed on n8n · run #2187 ok</text></g>
+
+  <!-- fabric spine -->
+  <text x="300" y="104" text-anchor="middle" font-size="10" class="mono muted">MCP</text>
+  <line x1="460" y1="150" x2="560" y2="150" stroke="#2e2742" stroke-width="2" stroke-dasharray="4 5"/>
+
+  <!-- right: fabric layer + engine + storage -->
+  <rect x="470" y="110" width="450" height="60" rx="12" fill="#1c1430" stroke="#a071ff" stroke-opacity=".6"/>
+  <text x="490" y="138" font-size="14" font-weight="800">n8n-fabric</text>
+  <text x="490" y="156" font-size="10.5" class="muted">MCP server · workflow embedder · cache</text>
+  <circle class="pulse" r="5" fill="#a071ff" style="offset-path:path('M695 170 L 695 200')"/>
+
+  <rect x="470" y="192" width="450" height="56" rx="12" fill="#2a1a18" stroke="#ff6d5a" stroke-opacity=".55"/>
+  <text x="490" y="218" font-size="13" font-weight="800" style="fill:#ff9a8a">n8n engine</text>
+  <text x="490" y="236" font-size="10.5" class="muted">REST API · execution engine · 500+ nodes</text>
+
+  <g>
+  <rect x="470" y="270" width="142" height="90" rx="12" fill="#10231c" stroke="#059669" stroke-opacity=".6"/>
+  <text x="541" y="300" text-anchor="middle" font-size="13" font-weight="700" style="fill:#5fd9a8">Qdrant</text>
+  <text x="541" y="320" text-anchor="middle" font-size="10" class="muted">workflow</text>
+  <text x="541" y="334" text-anchor="middle" font-size="10" class="muted">vectors</text>
+
+  <rect x="624" y="270" width="142" height="90" rx="12" fill="#2a1414" stroke="#dc2626" stroke-opacity=".6"/>
+  <text x="695" y="300" text-anchor="middle" font-size="13" font-weight="700" style="fill:#f08a8a">Redis</text>
+  <text x="695" y="320" text-anchor="middle" font-size="10" class="muted">cache &amp;</text>
+  <text x="695" y="334" text-anchor="middle" font-size="10" class="muted">state</text>
+
+  <rect x="778" y="270" width="142" height="90" rx="12" fill="#13202e" stroke="#4a86c5" stroke-opacity=".6"/>
+  <text x="849" y="300" text-anchor="middle" font-size="13" font-weight="700" style="fill:#8fc0ea">PostgreSQL</text>
+  <text x="849" y="320" text-anchor="middle" font-size="10" class="muted">n8n</text>
+  <text x="849" y="334" text-anchor="middle" font-size="10" class="muted">data</text>
+  </g>
+</svg>
